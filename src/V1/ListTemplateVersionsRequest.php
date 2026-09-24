@@ -9,15 +9,15 @@ use Google\Protobuf\Internal\GPBUtil;
 use Google\Protobuf\RepeatedField;
 
 /**
- * Message for requesting list of ParameterVersions
+ * Message for requesting list of TemplateVersions
  *
- * Generated from protobuf message <code>google.cloud.parametermanager.v1.ListParameterVersionsRequest</code>
+ * Generated from protobuf message <code>google.cloud.parametermanager.v1.ListTemplateVersionsRequest</code>
  */
-class ListParameterVersionsRequest extends \Google\Protobuf\Internal\Message
+class ListTemplateVersionsRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Required. Parent value for ListParameterVersionsRequest in the format
-     * `projects/{@*}locations/{@*}parameters/*`.
+     * Required. Parent value for ListTemplateVersionsRequest in the format
+     * `projects/{@*}locations/{@*}templates/*`.
      *
      * Generated from protobuf field <code>string parent = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = {</code>
      */
@@ -30,9 +30,9 @@ class ListParameterVersionsRequest extends \Google\Protobuf\Internal\Message
      */
     protected $page_size = 0;
     /**
-     * Optional. A page token, received from a previous `ListParameterVersions`
+     * Optional. A page token, received from a previous `ListTemplateVersions`
      * call. Provide this to retrieve the subsequent page.
-     * When paginating, all other parameters provided to `ListParameterVersions`
+     * When paginating, all other parameters provided to `ListTemplateVersions`
      * must match the call that provided the page token.
      *
      * Generated from protobuf field <code>string page_token = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -52,11 +52,11 @@ class ListParameterVersionsRequest extends \Google\Protobuf\Internal\Message
     protected $order_by = '';
 
     /**
-     * @param string $parent Required. Parent value for ListParameterVersionsRequest in the format
-     *                       `projects/&#42;/locations/&#42;/parameters/*`. Please see
-     *                       {@see ParameterManagerClient::parameterName()} for help formatting this field.
+     * @param string $parent Required. Parent value for ListTemplateVersionsRequest in the format
+     *                       `projects/&#42;/locations/&#42;/templates/*`. Please see
+     *                       {@see ParameterManagerClient::templateName()} for help formatting this field.
      *
-     * @return \Google\Cloud\ParameterManager\V1\ListParameterVersionsRequest
+     * @return \Google\Cloud\ParameterManager\V1\ListTemplateVersionsRequest
      *
      * @experimental
      */
@@ -73,15 +73,15 @@ class ListParameterVersionsRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $parent
-     *           Required. Parent value for ListParameterVersionsRequest in the format
-     *           `projects/{@*}locations/{@*}parameters/*`.
+     *           Required. Parent value for ListTemplateVersionsRequest in the format
+     *           `projects/{@*}locations/{@*}templates/*`.
      *     @type int $page_size
      *           Optional. Requested page size. Server may return fewer items than
      *           requested. If unspecified, server will pick an appropriate default.
      *     @type string $page_token
-     *           Optional. A page token, received from a previous `ListParameterVersions`
+     *           Optional. A page token, received from a previous `ListTemplateVersions`
      *           call. Provide this to retrieve the subsequent page.
-     *           When paginating, all other parameters provided to `ListParameterVersions`
+     *           When paginating, all other parameters provided to `ListTemplateVersions`
      *           must match the call that provided the page token.
      *     @type string $filter
      *           Optional. Filtering results
@@ -95,8 +95,8 @@ class ListParameterVersionsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Required. Parent value for ListParameterVersionsRequest in the format
-     * `projects/{@*}locations/{@*}parameters/*`.
+     * Required. Parent value for ListTemplateVersionsRequest in the format
+     * `projects/{@*}locations/{@*}templates/*`.
      *
      * Generated from protobuf field <code>string parent = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = {</code>
      * @return string
@@ -107,8 +107,8 @@ class ListParameterVersionsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Required. Parent value for ListParameterVersionsRequest in the format
-     * `projects/{@*}locations/{@*}parameters/*`.
+     * Required. Parent value for ListTemplateVersionsRequest in the format
+     * `projects/{@*}locations/{@*}templates/*`.
      *
      * Generated from protobuf field <code>string parent = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = {</code>
      * @param string $var
@@ -151,9 +151,9 @@ class ListParameterVersionsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Optional. A page token, received from a previous `ListParameterVersions`
+     * Optional. A page token, received from a previous `ListTemplateVersions`
      * call. Provide this to retrieve the subsequent page.
-     * When paginating, all other parameters provided to `ListParameterVersions`
+     * When paginating, all other parameters provided to `ListTemplateVersions`
      * must match the call that provided the page token.
      *
      * Generated from protobuf field <code>string page_token = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -165,9 +165,9 @@ class ListParameterVersionsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Optional. A page token, received from a previous `ListParameterVersions`
+     * Optional. A page token, received from a previous `ListTemplateVersions`
      * call. Provide this to retrieve the subsequent page.
-     * When paginating, all other parameters provided to `ListParameterVersions`
+     * When paginating, all other parameters provided to `ListTemplateVersions`
      * must match the call that provided the page token.
      *
      * Generated from protobuf field <code>string page_token = 3 [(.google.api.field_behavior) = OPTIONAL];</code>

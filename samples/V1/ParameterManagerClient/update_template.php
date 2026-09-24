@@ -22,30 +22,14 @@
 
 require_once __DIR__ . '/../../../vendor/autoload.php';
 
-// [START parametermanager_v1_generated_ParameterManager_ListLocations_sync]
+// [START parametermanager_v1_generated_ParameterManager_UpdateTemplate_sync]
 use Google\ApiCore\ApiException;
-use Google\ApiCore\PagedListResponse;
-use Google\Cloud\Location\ListLocationsRequest;
-use Google\Cloud\Location\Location;
 use Google\Cloud\ParameterManager\V1\Client\ParameterManagerClient;
+use Google\Cloud\ParameterManager\V1\Template;
+use Google\Cloud\ParameterManager\V1\UpdateTemplateRequest;
 
 /**
- * Lists information about the supported locations for this service.
- *
- * This method lists locations based on the resource scope provided in
- * the [ListLocationsRequest.name][google.cloud.location.ListLocationsRequest.name] field: *
- * **Global locations**: If `name` is empty, the method lists the
- * public locations available to all projects. * **Project-specific
- * locations**: If `name` follows the format
- * `projects/{project}`, the method lists locations visible to that
- * specific project. This includes public, private, or other
- * project-specific locations enabled for the project.
- *
- * For gRPC and client library implementations, the resource name is
- * passed as the `name` field. For direct service calls, the resource
- * name is
- * incorporated into the request path based on the specific service
- * implementation and version.
+ * Updates a single Template.
  *
  * This sample has been automatically generated and should be regarded as a code
  * template only. It will require modifications to work:
@@ -53,25 +37,23 @@ use Google\Cloud\ParameterManager\V1\Client\ParameterManagerClient;
  *  - It may require specifying regional endpoints when creating the service client,
  *    please see the apiEndpoint client configuration option for more details.
  */
-function list_locations_sample(): void
+function update_template_sample(): void
 {
     // Create a client.
     $parameterManagerClient = new ParameterManagerClient();
 
     // Prepare the request message.
-    $request = new ListLocationsRequest();
+    $template = new Template();
+    $request = (new UpdateTemplateRequest())
+        ->setTemplate($template);
 
     // Call the API and handle any network failures.
     try {
-        /** @var PagedListResponse $response */
-        $response = $parameterManagerClient->listLocations($request);
-
-        /** @var Location $element */
-        foreach ($response as $element) {
-            printf('Element data: %s' . PHP_EOL, $element->serializeToJsonString());
-        }
+        /** @var Template $response */
+        $response = $parameterManagerClient->updateTemplate($request);
+        printf('Response data: %s' . PHP_EOL, $response->serializeToJsonString());
     } catch (ApiException $ex) {
         printf('Call failed with message: %s' . PHP_EOL, $ex->getMessage());
     }
 }
-// [END parametermanager_v1_generated_ParameterManager_ListLocations_sync]
+// [END parametermanager_v1_generated_ParameterManager_UpdateTemplate_sync]
